@@ -30,7 +30,7 @@ namespace ShopUI
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        //// This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer("server = ENES-TUNAHAN; database = ShopDb; integrated security = true;MultipleActiveResultSets=True;"));
