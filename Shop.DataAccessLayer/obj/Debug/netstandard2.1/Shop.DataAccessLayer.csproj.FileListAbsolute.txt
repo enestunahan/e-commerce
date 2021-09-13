@@ -1,0 +1,14 @@
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccessLayer\bin\Debug\netstandard2.1\Shop.DataAccessLayer.deps.json
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccessLayer\bin\Debug\netstandard2.1\Shop.DataAccessLayer.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccessLayer\bin\Debug\netstandard2.1\Shop.DataAccessLayer.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccessLayer\bin\Debug\netstandard2.1\Shop.Core.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccessLayer\bin\Debug\netstandard2.1\Shop.Entities.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccessLayer\bin\Debug\netstandard2.1\Shop.Core.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccessLayer\bin\Debug\netstandard2.1\Shop.Entities.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccessLayer\obj\Debug\netstandard2.1\Shop.DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccessLayer\obj\Debug\netstandard2.1\Shop.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccessLayer\obj\Debug\netstandard2.1\Shop.DataAccessLayer.AssemblyInfo.cs
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccessLayer\obj\Debug\netstandard2.1\Shop.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccessLayer\obj\Debug\netstandard2.1\Shop.DataAccessLayer.csproj.CopyComplete
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccessLayer\obj\Debug\netstandard2.1\Shop.DataAccessLayer.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccessLayer\obj\Debug\netstandard2.1\Shop.DataAccessLayer.pdb

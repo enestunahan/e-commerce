@@ -1,0 +1,83 @@
+﻿@model ProductDetail
+
+
+<script>
+    $(document).ready(function () {
+
+        $("button").click(function () {
+            var form = $("#form");
+            $.ajax({
+                type: "POST",
+                url: "/Cart/AddToCart",
+                data: form.serialize(),
+                success: function (data) {
+                    var deger = Number($("#countcart").html()); // countcart idsi navbar içinde
+                    deger =  deger+data.quantity;
+                    $("#countcart").html(deger);
+                    Swal.fire(
+                        'Ürün Sepete Eklendi',
+                        data.quantity + '  adet  ' + data.name,
+                        'success'
+                    )
+                },
+                error: function (data) {
+                    alert(data.warning);
+                }
+            });
+        });
+    });
+
+</script>
+
+
+
+
+
+<div class="container-fluid"  style="margin-top:30px;">
+    <div class="row">
+        <div class="col-4">           
+                <div class="card" style="width:18rem; border:5px solid gray; border-radius:50px;">
+                    <div class="card-body" style="padding:50px;">
+                        <h5 class="card-title">@Model.Product.Name  bağlı olduğu kategorideki diğer ürünleri gör</h5>
+                        @foreach (var item in Model.Categories)
+                        {
+                            <a href="/Home/Index/@item.CategoryId" class="btn btn-info">@item.Name</a>
+                        }
+                    </div>
+                </div>                    
+        </div>
+        <div class="col-5">
+            <div class="card" style="align-items:center; border : none;">
+                <img src="@Model.Product.ImageUrl" class="card-img-top" alt="..." style="width:400px; height:300px;">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-weight:bold;">@Model.Product.Name</h5>
+                    <p class="card-text">@Model.Product.Description</p>
+                    <p class="card-text" style="text-decoration:underline; font-weight:bold;">@Model.Product.Price.ToString("c")</p>
+                </div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <form style="display:inline" id="form">
+                        <input type="hidden" name="ProductId" id="ProductId" value="@Model.Product.ProductId" />
+                        <input type="hidden" name="UserName" value="@User.Identity.Name" />
+                        <div class="input-group" >
+                            <input type="number" name="Quantity" id="Quantity" value="1" class="form-control" min="1" step="1" style="width:100px;display:inline; float:left;" />
+                            <button type="button" class="btn btn-info">
+                                Sepete Ekle <i class="fas fa-plus-circle"></i>
+                            </button> 
+                        </div>
+                    </form>
+                }
+                else
+                {
+                    <div class="alert alert-warning" role="alert">
+                        Sepetinize ürün ekleyebilmek için sisteme giriş yapmanız gerekmektedir
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="col-3">
+            @await Component.InvokeAsync("BestSellerProduct")
+        </div>
+    </div>
+</div>
+

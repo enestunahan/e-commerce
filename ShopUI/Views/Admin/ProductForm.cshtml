@@ -1,0 +1,60 @@
+﻿@model ProductModel
+
+<h1>Ürün Bilgileri</h1>
+
+<form asp-controller="Admin" asp-action="SaveProduct" method="post">
+    <div class="form-group">
+        <label>Ad</label>
+        <input  asp-for="@Model.Name" class="form-control" placeholder="Ürün Adı" />
+        <span style="background-color:red; color: aliceblue;" asp-validation-for="@Model.Name"></span>
+    </div>
+    <div class="form-group">
+        <label>Fiyat</label>
+        <input asp-for="@Model.Price" class="form-control" placeholder="Ürün Fiyat" />
+        <span style="background-color:red; color: aliceblue;" asp-validation-for="@Model.Price"></span>
+    </div>
+    <div class="form-group">
+        <label>Adet</label>
+        <input asp-for="@Model.Stock" class="form-control" placeholder="Ürün Adet" />
+        <span style="background-color:red; color: aliceblue;" asp-validation-for="@Model.Stock"></span>
+    </div>
+    <div class="form-group">
+        <label>Açıklama</label>
+        <input asp-for="@Model.Description" class="form-control" placeholder="Ürün Açıklama" />
+        <span style="background-color:red; color: aliceblue;" asp-validation-for="@Model.Description"></span>
+    </div>
+    <div class="form-group">
+        <label >Fotoğraf</label>
+        <input asp-for="@Model.ImageUrl" class="form-control" placeholder="Ürün Fotoğraf" />
+        <span style="background-color:red; color: aliceblue;" asp-validation-for="@Model.ImageUrl"></span>
+    </div>
+    <div class="form-group">
+        @if (Model.LinkedCategories == null)
+        {
+            @foreach (var item in Model.Categories)
+            {
+                <input type="checkbox" name="CategoryID" value="@item.CategoryId" /> @item.Name
+            }
+        }                 
+        else
+        {
+            <hr />
+            <h6>"@Model.Name" ürününü şu kategorilerden çıkar</h6>
+            @foreach (var item in Model.LinkedCategories)
+            {
+                <input type="checkbox" name="IdsToRemove" value="@item.CategoryId" /> @item.Name
+            }
+            <hr />
+            <h6>"@Model.Name" ürününü şu kategorilere ekle</h6>
+            @foreach (var item in Model.UnLinkedCategories)
+            {
+                <input type="checkbox" name="IdsToAdd" value="@item.CategoryId" /> @item.Name
+            }
+        }
+    </div>
+    @Html.HiddenFor(x => x.ProductId)
+    <input type="submit" class="btn btn-success" value="Kaydet" />
+</form>
+
+
+

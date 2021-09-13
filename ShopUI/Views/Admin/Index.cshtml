@@ -1,0 +1,43 @@
+﻿@model ProductListViewModel
+
+
+
+
+<div class="container-fluid" style="margin-top:30px;">
+    <div class="row">
+        <div class="col-5"></div>
+        <div class="col-2"> <a href="/Admin/AddProduct" class="btn btn-success" style="font-size:30px; font-weight:bold;">Ürün Ekle<i class="fas fa-plus-circle" style="padding:5px;"></i></a> </div>
+        <div class="col-5"></div>
+        <div class="col-12" id="products">
+           
+            <br />
+           
+            <table class="table table-bordered">
+                <tr>
+                    <th>Ürün ID</th>
+                    <th>Ürün Açıklama</th>
+                    <th>Ürün Ad</th>
+                    <th>Ürün Fiyat</th>
+                    <th>Ürün Stok</th>
+                    <th>Ürün Foto</th>
+                    <th>Güncelle</th>
+                    <th>Sil</th>
+                </tr>
+                @foreach (var item in Model.Products)
+                {
+                    <tr>
+                        <td>@item.ProductId</td>
+                        <td style="width:350px;">@item.Description</td>
+                        <td>@item.Name</td>
+                        <td>@item.Price TL</td>
+                        <td>@item.Stock ADET</td>
+                        <td><img src="@item.ImageUrl  " style="height:120px;width:100px;" /></td>
+                        <td><a href="/Admin/UpdateProduct/@item.ProductId" class="btn btn-warning" style="width:100%;">Güncelle</a></td>
+                        <td><a href="/Admin/DeleteProduct/@item.ProductId" class="btn btn-danger" style="width:100%;">Sil</a></td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    </div>
+

@@ -1,0 +1,61 @@
+﻿
+<script>
+
+
+    $(document).ready(function () {
+        $("#address").click(function () {
+            $.ajax({
+                type: "GET",
+                url: "/User/GetUserAddressess",
+                success: function (data) {
+                    $("#userinfo").html(data);
+                },
+
+            })
+        })
+
+        //$("#orders").click(function () {
+        //    $.ajax({
+        //        type: "GET",
+        //        url: "/User/GetUserOrders",
+        //        success: function (data) {
+        //            $("#userinfo").html(data);
+        //        },
+        //        error: function () {
+        //            console.log("Hata oluştu");
+        //        }
+        //    })
+        //})
+
+        $("#orders").click(function () {
+            $.get("/User/GetUserOrders").done(function (data) {
+
+                $("#userinfo").html(data);
+            });
+        })
+    })
+</script>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3" style="margin-top:50px; margin-left:-3%;">
+
+            <ul class="list-group list-group-flush" style="text-align:end; cursor:pointer;">
+                <li class="list-group-item" style="font-weight:bold; font-size:25px; background-color:green; color:aliceblue;"><i class="fas fa-user-tag"></i>  Kişisel Bilgilerim</li>
+                <br />
+                <li id="address" class="list-group-item" style="font-weight:bold; font-size:25px;background-color:green; color:aliceblue;"><i class="fas fa-location-arrow"></i>  Adres Bilgilerim</li>
+                <br />
+                <li id="orders" class="list-group-item" style="font-weight:bold; font-size:25px; background-color:green; color:aliceblue;"><i class="fas fa-gift"></i>  Geçmiş Siparişlerim</li>
+                <br />
+                <li class="list-group-item" style="font-weight:bold; font-size:25px; background-color:green; color:aliceblue;"><i class="fab fa-cc-visa"></i>  Ödeme Yöntemlerim</li>
+            </ul>
+        </div>
+        <div class="col-6" id="userinfo" style="margin-top:50px;">
+
+        </div>
+        <div class="col-3" style="margin-top:30px;">
+            @*@await Component.InvokeAsync("BestSellerProduct")*@
+        </div>
+    </div>
+</div>

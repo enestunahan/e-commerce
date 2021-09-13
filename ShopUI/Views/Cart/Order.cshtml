@@ -1,0 +1,179 @@
+﻿@model OrderViewModel
+<script>
+    $(document).ready(function () {
+        $("#btnAddressEkle").click(function () {          
+            $.ajax({
+                type: "POST",
+                url: "/cart/addAddress",
+                data: $("#addaddressform").serialize(),
+                dataType: "json",              
+                success: function (data) {                    
+                    if (data.county != null) {
+                        $("#addresses").append(`<div class="col-6" style=" float:left;">
+                                <div class="card" style="height:200px;">
+                                    <h5 class="card-header"><input type="radio" name="Addressid" value="${data.id}" /> ${data.addressTitle}</h5>
+                                    <div class="card-body">
+                                        <h5 class="card-title">${data.county} <i class="fas fa-arrow-circle-right" style="background-color:transparent; padding-right:10px;"></i> ${data.district}</h5>
+                                        <p class="card-text">${data.openAddress}</p>
+                                    </div>
+                                </div>
+                            </div>`);
+                    }
+                    else {                                            
+                        $("#validation").html(data);
+                    }
+                   
+                },
+                error: function (data) {
+
+                }
+
+            });
+
+        })
+
+    });
+
+
+
+</script>
+
+@*//@Html.AntiForgeryToken();*@
+
+<div class="container-fluid" style="margin-top:30px;">
+    <div class="row">
+        <div class="col-7">
+            <div class="col-12">
+                <h2 style="color:darkred; font-weight:bold;">Adres Bilgileri</h2>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="">Yeni Adres Ekle</button>
+                <!--Popup Başlangıç-->
+                @*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="">Yeni Adres Ekle</button>*@
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Eklenecek Adres Bilgileri</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="addaddressform">
+                                    <div class="form-group" id="validation" style="background-color:red; color:aliceblue;"></div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Adres Başlığı:</label>
+                                        <input type="text" class="form-control" id="recipient-name" name="AddressTitle">                                      
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">İl:</label>
+                                        <input class="form-control" name="County" />
+                                       
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">İlçe:</label>
+                                        <input class="form-control" name="District" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Açık Adres:</label>
+                                        <textarea class="form-control" name="OpenAddress"></textarea>
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                                        <button type="button" class="btn btn-primary" id="btnAddressEkle">Ekle</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--Popup Bitiş-->
+                <hr />
+
+                <form asp-controller="Cart" asp-action="Order" method="post">
+
+
+                    <div id="addresses" style="width:100%; height:100%;">
+                        @foreach (var item in Model.Addresses)
+                        {
+                            <div class="col-6" style=" float:left;">
+                                <div class="card" style="height:200px;">
+                                    <h5 class="card-header"><input type="radio" name="Addressid" value="@item.Id" /> @item.AddressTitle</h5>
+                                    <div class="card-body">
+                                        <h5 class="card-title">@item.County <i class="fas fa-arrow-circle-right" style="background-color:transparent; padding-right:10px;"></i> @item.District</h5>
+                                        <p class="card-text">@item.OpenAddress</p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+
+                    <div class="col-12" style="clear:both;">
+                        <h2 style="color:darkred; font-weight:bold;">Ödeme Bilgileri</h2>
+                        <hr />
+                        <label>Kart Üzerindeki isim</label>
+                        <input type="text" class="form-control" name="NameOnTheCard" />
+                        <label>Kart Numarası</label>
+                        <input type="text" class="form-control" name="CardNumber" />
+                        <label>Son Kullanma Tarihi</label>
+                        <input type="date" class="form-control" style="width:30%; display:inline;" name="CardExpirationDate" />
+                        <label style="display:inline; margin-left:25px;">CVC</label>
+                        <input type="password" class="form-control" style="width:10%; display:inline; margin-left:15px;" name="CardCvc" />
+                    </div>
+                    <button class="btn btn-success" type="submit">Öde</button>
+                </form>
+            </div>
+
+            <!--Buraya gelecek-->
+        </div>
+
+        <div class="col-5">
+            <div class="col-12">
+                <h2 style="color:darkred; font-weight:bold;">Ürün Bilgileri</h2>
+                <hr />
+                <table class="table" style="background-color:#082567;font-weight:bold; color:aliceblue;">
+                    <thead>
+                        <tr>
+                            <th scope="col">Ürün</th>
+                            <th scope="col">Adet</th>
+                            <th scope="col">Fiyat</th>
+                            <th scope="col">Toplam Fiyat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.OrderItemModels)
+                        {
+                            <tr>
+                                <td>@item.Name</td>
+                                <td>@item.Quantity</td>
+                                <td>@item.Price.ToString("c")</td>
+                                <td>@item.TotalPrice.ToString("c")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12" style="margin-top:auto;">
+                <h2 style="color:darkred; font-weight:bold;">Sipariş Özeti</h2>
+                <hr />
+                <table class="table" style="background-color:#082567;font-weight:bold; color:aliceblue;">
+                    <tr>
+                        <th>Sepet Toplam</th>
+                        <th>@Model.TotalPrice.ToString("c")</th>
+                    </tr>
+                    <tr>
+                        <th>Kargo</th>
+                        <th>Ücretsiz</th>
+                    </tr>
+                    <tr>
+                        <th>Sipariş Toplam</th>
+                        <th>@Model.TotalPrice.ToString("c")</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

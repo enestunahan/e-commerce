@@ -1,0 +1,28 @@
+﻿
+@using Shop.Entities.Concrete;
+@model Address
+
+@*<form id="addressform">*@
+    <div class="form-group" id="validation" style="background-color:red; color:aliceblue;"></div>
+    <div class="form-group">
+        <label for="recipient-name" class="col-form-label">Adres Başlığı:</label>
+        <input type="text" class="form-control" id="recipient-name" asp-for="@Model.AddressTitle">
+    </div>
+    <div class="form-group">
+        <label for="message-text" class="col-form-label">İl:</label>
+        <input class="form-control" asp-for="@Model.County" />
+    </div>
+    <div class="form-group">
+        <label for="message-text" class="col-form-label">İlçe:</label>
+        <input class="form-control" asp-for="@Model.District" />
+    </div>
+    <div class="form-group">
+        <label for="message-text" class="col-form-label">Açık Adres:</label>
+        <textarea class="form-control" asp-for="@Model.OpenAddress"></textarea>
+    </div>
+    @Html.HiddenFor(x=>x.Id)
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+        <button type="button" class="btn btn-primary" id="btnAddressUpdate">Güncelle</button>
+    </div>
+@*</form>*@

@@ -1,0 +1,14 @@
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccess\obj\Debug\netstandard2.1\Shop.DataAccess.csprojAssemblyReference.cache
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccess\obj\Debug\netstandard2.1\Shop.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccess\obj\Debug\netstandard2.1\Shop.DataAccess.AssemblyInfo.cs
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccess\obj\Debug\netstandard2.1\Shop.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccess\bin\Debug\netstandard2.1\Shop.DataAccess.deps.json
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccess\bin\Debug\netstandard2.1\Shop.DataAccess.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccess\bin\Debug\netstandard2.1\Shop.DataAccess.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccess\bin\Debug\netstandard2.1\Shop.Core.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccess\bin\Debug\netstandard2.1\Shop.Entities.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccess\bin\Debug\netstandard2.1\Shop.Core.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccess\bin\Debug\netstandard2.1\Shop.Entities.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccess\obj\Debug\netstandard2.1\Shop.DataAccess.csproj.CopyComplete
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccess\obj\Debug\netstandard2.1\Shop.DataAccess.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.DataAccess\obj\Debug\netstandard2.1\Shop.DataAccess.pdb

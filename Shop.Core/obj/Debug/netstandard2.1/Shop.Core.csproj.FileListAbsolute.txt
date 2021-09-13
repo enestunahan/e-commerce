@@ -1,0 +1,9 @@
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Core\bin\Debug\netstandard2.1\Shop.Core.deps.json
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Core\bin\Debug\netstandard2.1\Shop.Core.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Core\bin\Debug\netstandard2.1\Shop.Core.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Core\obj\Debug\netstandard2.1\Shop.Core.AssemblyInfoInputs.cache
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Core\obj\Debug\netstandard2.1\Shop.Core.AssemblyInfo.cs
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Core\obj\Debug\netstandard2.1\Shop.Core.csproj.CoreCompileInputs.cache
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Core\obj\Debug\netstandard2.1\Shop.Core.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Core\obj\Debug\netstandard2.1\Shop.Core.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Core\obj\Debug\netstandard2.1\Shop.Core.csprojAssemblyReference.cache

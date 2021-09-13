@@ -1,0 +1,209 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.DataAccess\\Shop.DataAccess.csproj": {}
+  },
+  "projects": {
+    "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.Core\\Shop.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.Core\\Shop.Core.csproj",
+        "projectName": "Shop.Core",
+        "projectPath": "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.Core\\Shop.Core.csproj",
+        "packagesPath": "C:\\Users\\Enes Tunahan\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Enes Tunahan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.DataAccess\\Shop.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.DataAccess\\Shop.DataAccess.csproj",
+        "projectName": "Shop.DataAccess",
+        "projectPath": "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.DataAccess\\Shop.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Enes Tunahan\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Enes Tunahan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.Core\\Shop.Core.csproj": {
+                "projectPath": "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.Core\\Shop.Core.csproj"
+              },
+              "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.Entities\\Shop.Entities.csproj": {
+                "projectPath": "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.Entities\\Shop.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.Entities\\Shop.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.Entities\\Shop.Entities.csproj",
+        "projectName": "Shop.Entities",
+        "projectPath": "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.Entities\\Shop.Entities.csproj",
+        "packagesPath": "C:\\Users\\Enes Tunahan\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Enes Tunahan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.Core\\Shop.Core.csproj": {
+                "projectPath": "C:\\dev\\sharp\\myProjects\\e-commerce\\Shop.Core\\Shop.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

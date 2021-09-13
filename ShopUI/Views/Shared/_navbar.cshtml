@@ -1,0 +1,48 @@
+﻿
+<script>
+    $(document).ready(function () {
+            $.ajax({
+                type: "GET",               
+                url: "/Cart/CountCart",
+                success: function (data) {
+                    $("#countcart").html(data);
+                },
+                error: function() {
+                    console.log("hata alındı")
+                }               
+            })
+    })
+</script>
+
+<header>
+    <nav>
+        <ul class="nav_links">
+            <li style="color:black; font-size:30px;">Yaz Bilgi Ticaret A.Ş</li>
+            <li><a href="/Home/Index">Anasayfa</a></li>
+            @if (User.Identity.IsAuthenticated)
+            {
+                @if (User.IsInRole("Admin"))
+                {
+                    <li><a href="/Admin/Index">Depo</a></li>
+                    <li><a href="/Admin/RoleList">Yetkiler</a></li>
+                }
+            }
+            <li><a href="/Cart/Index"><i class="fas fa-shopping-cart" style="font-size:30px;"></i>Sepetim <strong id="countcart" style="border:4px solid red; border-radius:50px;"></strong> </a></li>
+        </ul>
+    </nav>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div>
+            <a class="button" style="color:aliceblue;" href="/Account/Logout">Çıkış Yap</a>
+            <a class="button" style="color:aliceblue;" href="/User/Index">@User.Identity.Name</a>
+        </div>
+    }
+    else
+    {
+        <div>
+            <a class="button"style="color:aliceblue;" href="/Account/Register">Kayıt Ol</a>
+            <a class="button"style="color:aliceblue;" href="/Account/Login">Giriş Yap</a>
+        </div>
+    }
+
+</header>

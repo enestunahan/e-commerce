@@ -1,0 +1,12 @@
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Entities\bin\Debug\netstandard2.1\Shop.Entities.deps.json
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Entities\bin\Debug\netstandard2.1\Shop.Entities.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Entities\bin\Debug\netstandard2.1\Shop.Entities.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Entities\obj\Debug\netstandard2.1\Shop.Entities.AssemblyInfoInputs.cache
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Entities\obj\Debug\netstandard2.1\Shop.Entities.AssemblyInfo.cs
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Entities\obj\Debug\netstandard2.1\Shop.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Entities\obj\Debug\netstandard2.1\Shop.Entities.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Entities\obj\Debug\netstandard2.1\Shop.Entities.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Entities\obj\Debug\netstandard2.1\Shop.Entities.csprojAssemblyReference.cache
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Entities\bin\Debug\netstandard2.1\Shop.Core.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Entities\bin\Debug\netstandard2.1\Shop.Core.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Entities\obj\Debug\netstandard2.1\Shop.Entities.csproj.CopyComplete

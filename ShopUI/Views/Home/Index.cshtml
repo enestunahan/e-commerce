@@ -1,0 +1,85 @@
+﻿@model ProductListViewModel
+
+
+
+<script>
+    $(document).ready(function () {
+
+      
+
+
+        $(".list-group").on("click", ".categoryitem", function () {
+            $(".categoryitem").css({ color: 'black', backgroundColor: 'white' });
+            var categoryid = $(this).data("id");
+            $(this).css({ color: 'aliceblue', backgroundColor: '#5bc0de'});
+            $.ajax({
+                type: "POST",
+                data: { id: categoryid },
+                url: "/Home/ProductsGetByCategory",
+                success: function (data) {
+                    $("#products").html(data);
+                },
+                error: function (data) {
+                    console.log(data.status);
+                }
+            })
+        })
+
+
+        $(".form-inline").on("click", ".btn", function () {
+            var search = $("#searchinput").val();
+            if (search == "") {
+                Swal.fire(
+                    'Ne Aramıştınız?',
+                    'Bu alanı boş geçilemez!!',
+                    'question'
+                )
+            }
+            else {
+                $.ajax({
+                    type: "POST",
+                    data: { searchvalue: search },
+                    url: "/Home/Search",
+                    success: function (data) {
+                        $("#products").html(data);
+                    },
+                    error: function (data) {
+
+                    }
+                })
+            }         
+        })
+
+      
+
+    })
+</script>
+
+
+
+<div class="container-fluid" style="margin:0px; padding:0px;">
+    <div class="row">
+        <div class="col-2">
+            <div class="list-group" style="margin-top:30px; margin-left:-15px; width:255px;" >
+                @foreach (var item in Model.Categories)
+                {
+                    <a data-id="@item.CategoryId" class="list-group-item categoryitem " style="cursor:pointer; text-align:center; font-size:25px; width:100%;">@item.Name</a>
+                }
+            </div>
+            <div class="col-12" style="margin-top:60px;margin-left:-30px;">
+                <form class="form-inline my-2 my-lg-0" style="align-items:center;">
+                        <input class="form-control mr-sm-2" type="search" id="searchinput" name="searchvalue" placeholder="ürün" aria-label="Search" style="width:255px; font-size:25px;">
+                        <br />
+                        <button class="btn btn-info my-sm-0 mt-3" type="button" style="width:300px; font-size:20px; font-weight:bold; margin-left:50px; margin-top:30px;">Ara <i class="fas fa-search"></i>  </button>
+                </form>
+            </div>           
+        </div>
+        <div class="col-8" id="products">         
+                @await Html.PartialAsync("_product")          
+        </div>
+        <div class="col-2" style="margin-top:30px;">
+            
+            @await Component.InvokeAsync("BestSellerProduct")
+        </div>
+    </div>
+</div>

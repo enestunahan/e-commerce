@@ -1,0 +1,32 @@
+﻿
+@model List<UserOrderViewModel>
+@{ 
+    Layout = null;
+}
+@foreach(var item in Model)
+{
+<div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                Sipariş Numarası @item.OrderId
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+                @foreach (var orderitem in item.OrderItems)
+                {
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">@orderitem.ProductName</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">@orderitem.ProductQuantity</h6>
+                            <p class="card-text">@orderitem.ProductPrice</p>                         
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+}
+

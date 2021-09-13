@@ -1,0 +1,16 @@
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\bin\Debug\netstandard2.1\Shop.Business.deps.json
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\bin\Debug\netstandard2.1\Shop.Business.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\bin\Debug\netstandard2.1\Shop.Business.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\obj\Debug\netstandard2.1\Shop.Business.AssemblyInfoInputs.cache
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\obj\Debug\netstandard2.1\Shop.Business.AssemblyInfo.cs
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\obj\Debug\netstandard2.1\Shop.Business.csproj.CoreCompileInputs.cache
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\obj\Debug\netstandard2.1\Shop.Business.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\obj\Debug\netstandard2.1\Shop.Business.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\obj\Debug\netstandard2.1\Shop.Business.csprojAssemblyReference.cache
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\bin\Debug\netstandard2.1\Shop.Core.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\bin\Debug\netstandard2.1\Shop.DataAccess.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\bin\Debug\netstandard2.1\Shop.Entities.dll
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\bin\Debug\netstandard2.1\Shop.DataAccess.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\bin\Debug\netstandard2.1\Shop.Entities.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\bin\Debug\netstandard2.1\Shop.Core.pdb
+C:\Users\Enes Tunahan\Desktop\Shop\Shop.Business\obj\Debug\netstandard2.1\Shop.Business.csproj.CopyComplete
